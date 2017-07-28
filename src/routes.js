@@ -2,9 +2,18 @@ import Login from './views/Login.vue'
 import NotFound from './views/404.vue'
 import Home from './views/Home.vue'
 import Main from './views/Main.vue'
+
 import Table from './views/nav1/Table.vue'
 import Form from './views/nav1/Form.vue'
 import user from './views/nav1/user.vue'
+
+//SQL列表页面
+import SqlList from './views/nav1/SqlList.vue'
+//SQL表单页面
+import SqlForm from './views/nav1/SqlForm.vue'
+//SQL执行页面
+import SqlExecute from './views/nav1/SqlExecute.vue'
+
 import Page4 from './views/nav2/Page4.vue'
 import Page5 from './views/nav2/Page5.vue'
 import Page6 from './views/nav3/Page6.vue'
@@ -27,13 +36,17 @@ let routes = [
     {
         path: '/',
         component: Home,
-        name: '导航一',
+        name: 'SQL管理页面',
         iconCls: 'el-icon-message',//图标样式class
         children: [
             { path: '/main', component: Main, name: '主页', hidden: true },
             { path: '/table', component: Table, name: 'Table' },
             { path: '/form', component: Form, name: 'Form' },
             { path: '/user', component: user, name: '列表' },
+
+            { path: '/sqllist', component: SqlList, name: 'SQL列表' },
+            { path: '/sqlform', component: SqlForm, name: 'SQL表单' },
+            { path: '/sqlexecute', component: SqlExecute, name: 'SQL执行页面' },
         ]
     },
     {
